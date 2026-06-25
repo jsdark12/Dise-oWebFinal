@@ -7,30 +7,19 @@ Dise-oWebFinal
 Dise-oWebFinal/
 ---
 
-##### │
-
-##### ├── .github/               # Flujos de trabajo, CI/CD y plantillas de Pull Requests
-
-##### ├── .vscode/               # Configuración compartida del editor
-
-##### │   ├── settings.json      # Configuración del proyecto para el equipo
-
-##### │   └── extensions.json    # Extensiones recomendadas para el equipo
-
-##### │
-
 ##### ├── src/                   # Código fuente (todo lo que se procesa)
 
 ##### │   ├── assets/            # Fuentes, imágenes globales, iconos
 
-##### │   ├── css/               # Arquitectura CSS modular
+##### │   ├── css/               # Arquitectura CSS
 
-##### │   ├── js/                # Lógica modular
+##### │   ├── js/                # Scripts
 
 ##### │   └── pages/             # Archivos HTML o vistas del sitio
 
+---
 
 └── README.md              # Documentación del proyecto y guía de instalación
 
----
+
 
