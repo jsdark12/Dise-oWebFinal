@@ -29,11 +29,6 @@ Dise-oWebFinal/
 
 ##### │   └── pages/             # Archivos HTML o vistas del sitio
 
-##### │
-
-##### ├── .editorconfig          # Mantiene estilos de formateo idénticos entre desarrolladores
-
-##### ├── .gitignore             # Archivos que Git debe ignorar (node\_modules, etc.)
 
 └── README.md              # Documentación del proyecto y guía de instalación
 
