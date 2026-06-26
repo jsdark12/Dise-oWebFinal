@@ -37,10 +37,6 @@
     color: var(--white) !important;
 }
 
-.navbar-brand::before {
-    content: "🐉 ";
-}
-
 .nav-link {
     color: var(--gray-light) !important;
     font-weight: 500;
