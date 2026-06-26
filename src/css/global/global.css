@@ -1,0 +1,166 @@
+/* ============ PALETA DE COLORES GHOSTDRAGON (ROJO OSCURO) ============ */
+:root {
+    --primary: #c0392b;
+    --primary-dark: #962d22;
+    --primary-light: #e74c3c;
+    --primary-glow: #a93226;
+    --secondary: #e74c3c;
+    --secondary-dark: #c0392b;
+    --dark: #0a0a0a;
+    --dark-card: #111111;
+    --dark-light: #1a1a1a;
+    --gray: #9ca3af;
+    --gray-light: #b0b7c4;
+    --gray-dark: #6b7280;
+    --white: #ffffff;
+    --border-color: rgba(192, 57, 43, 0.2);
+    --border-hover: rgba(192, 57, 43, 0.4);
+    --shadow-primary: rgba(192, 57, 43, 0.3);
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--white) !important;
+}
+
+.navbar-brand::before {
+    content: "🐉 ";
+}
+
+.nav-link {
+    color: var(--gray-light) !important;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--border-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ============ FORMULARIO DE BÚSQUEDA ============ */
+.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.25);
+    color: var(--white);
+}
+
+.form-control::placeholder {
+    color: var(--gray-dark);
+}
+
+/* ===== ESTILO PARA FOOTER =====*/
+
+.site-footer {
+    background-color: #333333;
+    padding: 3rem 0;
+    position: relative;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: #e85d04;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-socials a {
+    color: #e85d04;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.footer-integrantes {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-integrantes h4 {
+    color: #e85d04;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-integrantes li {
+    color: #8b8f98;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    color: #555;
+    font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        padding-bottom: 4rem; 
+    }
+
+    .footer-integrantes {
+        position: absolute;
+        bottom: 2rem;
+        right: 3rem;
+        margin-top: 0;
+        text-align: right;
+    }
+}
