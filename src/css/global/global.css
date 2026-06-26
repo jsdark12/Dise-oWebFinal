@@ -19,6 +19,10 @@
 }
 
 /* ============ NAVBAR ============ */
+.logo{
+    max-width: 100px;
+}
+
 .navbar {
     background: rgba(10, 10, 10, 0.95) !important;
     backdrop-filter: blur(12px);
