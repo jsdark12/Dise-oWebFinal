@@ -77,6 +77,51 @@
     color: var(--gray-dark);
 }
 
+/* ============ BOTÓN DE BÚSQUEDA ============ */
+.btn-outline-success {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-success:hover {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: var(--white) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 20px var(--shadow-primary);
+}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-dark);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* ============ CUERPO GENERAL ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
 /* ===== ESTILO PARA FOOTER =====*/
 
 .site-footer {
