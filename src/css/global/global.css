@@ -132,6 +132,7 @@ body {
     margin-top: 4rem;
 }
 
+/*----linea decorativa----*/
 .site-footer::before {
     content: '';
     position: absolute;
@@ -139,8 +140,9 @@ body {
     left: 5%;
     right: 5%;
     height: 1px;
-    background: #e85d04;
+    background: var(--primary-dark);
 }
+/*----linea decorativa----*/
 
 .footer-container {
     display: flex;
@@ -150,7 +152,7 @@ body {
 }
 
 .footer-logo {
-    width: 200px;
+    width: 10rem;
     height: auto;
     margin-bottom: 0.5rem;
 }
@@ -161,7 +163,7 @@ body {
 }
 
 .footer-socials a {
-    color: #e85d04;
+    color: var(--primary-light);
     font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
