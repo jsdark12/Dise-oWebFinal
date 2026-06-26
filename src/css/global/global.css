@@ -80,7 +80,7 @@
 /* ===== ESTILO PARA FOOTER =====*/
 
 .site-footer {
-    background-color: #333333;
+    background-color: rgba(10, 10, 10, 0.95);
     padding: 3rem 0;
     position: relative;
     text-align: center;

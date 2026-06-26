@@ -1,13 +1,11 @@
-/* =========================================
-   ESTILOS DEL CATALOGO - MAIN
-   ========================================= */
-
+/*===== MAIN ======*/
 .catalog-main {
     padding: 2rem 0;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
 
+/*===== HEADER-MAIN*/
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -42,6 +40,7 @@
     cursor: pointer;
 }
 
+/*===== HEADER-MAIN*/
 .catalog-layout {
     display: grid;
     grid-template-columns: 260px 1fr;
