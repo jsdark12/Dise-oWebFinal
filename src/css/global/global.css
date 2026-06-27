@@ -4,8 +4,9 @@
     --primary-dark: #962d22;
     --primary-light: #e74c3c;
     --primary-glow: #a93226;
-    --secondary: #e74c3c;
+    --secondary: #f84d3a;
     --secondary-dark: #c0392b;
+    --secondary-light: #ff5638;
     --dark: #0a0a0a;
     --dark-card: #111111;
     --dark-light: #1a1a1a;
@@ -15,6 +16,7 @@
     --white: #ffffff;
     --border-color: rgba(192, 57, 43, 0.2);
     --border-hover: rgba(192, 57, 43, 0.4);
+    --background-hover: rgba(255, 92, 0, 0.1);
     --shadow-primary: rgba(192, 57, 43, 0.3);
 }
 
