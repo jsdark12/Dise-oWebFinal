@@ -1,3 +1,4 @@
+/*=====Scrpit para el boton FILTRAR=====*/
 document.addEventListener('DOMContentLoaded', () => {
     
     const btnToggleFiltros = document.querySelector('#btn-toggle-filtros');

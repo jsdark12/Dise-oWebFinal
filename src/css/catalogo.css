@@ -19,10 +19,10 @@
 .section-header button {
     width: 5.5rem;
     border-radius: 7px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: var(--dark-card);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
