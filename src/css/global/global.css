@@ -22,7 +22,8 @@
 
 /* ============ NAVBAR ============ */
 .logo{
-    max-width: 100px;
+    max-width: 5rem;
+    margin-left: 1rem;
 }
 
 .navbar {
@@ -67,6 +68,7 @@
     align-items: center;
     background-color: var(--gray-dark);
     margin-left: 0.5rem;
+    margin-right: 1rem;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
