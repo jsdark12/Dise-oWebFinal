@@ -23,6 +23,13 @@
     background-color: var(--dark-card);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.section-header button:hover{
+    border-color: var(--secondary-light);
+    background-color: var(--background-hover);
+    color: var(--secondary-light);
 }
 
 .catalog-sort {
@@ -43,7 +50,7 @@
     cursor: pointer;
 }
 
-/*===== ASIDE FILTROS =====*/
+/*===== BODY-MAIN =====*/
 .catalog-layout {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -51,6 +58,11 @@
     align-items: start;
 }
 
+.catalog-layout.filters-hidden {
+    grid-template-columns: 1fr;
+}
+
+/*===== ASIDE FILTROS =====*/
 .sidebar-filters {
     background-color: var(--dark-card);
     padding: 1.5rem;
