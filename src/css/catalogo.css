@@ -54,7 +54,7 @@
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     position: sticky;
-    max-height: calc(100vh - 120px);
+    max-height: calc(152.2vh - 120px);
     overflow-y: auto;
 }
 
@@ -71,12 +71,12 @@
 .sidebar-filters::-webkit-scrollbar-thumb {
     background: var(--primary-dark);
     border-radius: 4px;
+    
 }
 
 .sidebar-filters::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
 }
-
 /*----Scrollbar para filtros----*/
 
 .filter-group {
