@@ -16,10 +16,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.section-header h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
+.section-header button {
+    width: 5.5rem;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    background-color: var(--dark-card);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .catalog-sort {
