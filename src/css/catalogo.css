@@ -362,7 +362,7 @@
     }
 
     .sort-select {
-        background-color: #111318;
+        background-color: var(--dark-card);
         color: #e1e4e8;
         border: 1px solid rgba(255, 255, 255, 0.2);
         padding: 8px 12px;
@@ -370,6 +370,7 @@
         outline: none;
         cursor: pointer;
     }
+
     /*===== ASIDE FILTROS =====*/
     .sidebar-filters {
         background-color: var(--dark-card);
