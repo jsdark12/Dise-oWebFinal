@@ -65,7 +65,7 @@
 /*===== ASIDE FILTROS =====*/
 .sidebar-filters {
     background-color: var(--dark-card);
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     position: sticky;
@@ -140,6 +140,17 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
+}
+
+.sticky-filter-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--dark-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem; 
 }
 
 .btn-primary.w-100 {

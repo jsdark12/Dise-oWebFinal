@@ -14,6 +14,7 @@
     --gray-light: #b0b7c4;
     --gray-dark: #6b7280;
     --white: #ffffff;
+    --border-gray: rgba(255, 255, 255, 0.2);
     --border-color: rgba(192, 57, 43, 0.2);
     --border-hover: rgba(192, 57, 43, 0.4);
     --background-hover: rgba(255, 92, 0, 0.1);
