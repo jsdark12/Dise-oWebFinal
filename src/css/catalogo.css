@@ -192,6 +192,7 @@
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .game-card:hover {
@@ -208,7 +209,7 @@
 
 .game-image i{
     position: absolute;
-    top: 10px;
+    top: 6px;
     left: 10px;
     color: white;
     font-size: 1.8rem;
