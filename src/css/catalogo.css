@@ -206,6 +206,14 @@
     background-color: #1e293b;
 }
 
+.game-image i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.8rem;
+}
+
 .image-placeholder {
     width: 100%;
     height: 100%;
@@ -243,6 +251,11 @@
     text-transform: uppercase;
     color: #9ca3af;
     margin-bottom: 0.5rem;
+}
+
+.game-platform i {
+    color: white;
+    margin-left: 0.5rem;
 }
 
 .game-title {
@@ -430,9 +443,9 @@
 
     /*===== SECCION CATALOGO =====*/
     .catalog-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        grid-template-columns: 1fr;
     }
 
     .game-card {
@@ -453,7 +466,7 @@
 
     .game-image {
         position: relative;
-        height: 180px;
+        height: 100%;
         background-color: #1e293b;
     }
 
@@ -489,6 +502,12 @@
         flex: 1; 
     }
 
+    .game-text-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .game-platform {
         font-size: 0.75rem;
         text-transform: uppercase;
@@ -501,7 +520,6 @@
         font-weight: bold;
         color: #fff;
         line-height: 1.3;
-
         overflow: hidden;
     }
 
@@ -510,7 +528,7 @@
         justify-content: space-between;
         align-items: flex-end;
         margin-top: auto;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -553,9 +571,7 @@
     }
 
     .offers-count {
-        font-size: 0.75rem;
-        color: var(--gray-dark);
-        text-align: center;
+        display: none;
     }
 
     .btn-compare {
