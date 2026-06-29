@@ -17,12 +17,13 @@
 }
 
 .section-header button {
-    width: 5.5rem;
-    border-radius: 7px;
-    font-size: 1rem;
+    width: auto;
+    font-size: 0.9rem;
     background-color: var(--dark-card);
-    color: white;
+    color: #e1e4e8;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .sort-select {
-    background-color: #111318;
+    background-color: var(--dark-card);
     color: #e1e4e8;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 8px 12px;
@@ -321,7 +322,7 @@
     color: var(--secondary-light);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
     .catalog-layout {
         grid-template-columns: 1fr;
     }
@@ -330,5 +331,151 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    /*===== HEADER-MAIN =====*/
+    .section-header {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        color: whitesmoke;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .text-order-by {
+        display: none;
+    }
+
+    .section-header button:hover{
+        border-color: var(--secondary-light);
+        background-color: var(--background-hover);
+        color: var(--secondary-light);
+    }
+
+    .catalog-sort {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: #9ca3af;
+    }
+
+    .sort-select {
+        background-color: #111318;
+        color: #e1e4e8;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 12px;
+        border-radius: 6px;
+        outline: none;
+        cursor: pointer;
+    }
+    /*===== ASIDE FILTROS =====*/
+    .sidebar-filters {
+        background-color: var(--dark-card);
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        position: sticky;
+        max-height: calc(152.2vh - 120px);
+        overflow-y: auto;
+    }
+
+    /*----Scrollbar para filtros----*/
+    .sidebar-filters::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    .sidebar-filters::-webkit-scrollbar-track {
+        background: var(--dark);
+    }
+
+    .sidebar-filters::-webkit-scrollbar-thumb {
+        background: var(--primary-dark);
+        border-radius: 4px;
+        
+    }
+
+    .sidebar-filters::-webkit-scrollbar-thumb:hover {
+        background: var(--primary);
+    }
+    /*----Scrollbar para filtros----*/
+
+    .filter-group {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .filter-group:last-of-type {
+        border-bottom: none;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
+    }
+
+    .filter-group h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+
+    .filter-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.85rem;
+        color: var(--gray-light);
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .filter-option:hover {
+        color: var(--secondary-light);
+    }
+
+    .filter-option input[type="checkbox"]{
+        accent-color: var(--secondary-light);
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+    .filter-option input[type="radio"]{
+        accent-color: var(--secondary-light);
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+    .sticky-filter-header {
+        background-color: var(--dark-light);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        margin-bottom: 1.5rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem; 
+    }
+
+    .btn-primary.w-100 {
+        width: 100%;
+        font-size: 0.85rem;
+        font-weight: bold;
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary.w-100:hover {
+        border-color: var(--secondary-light);
+        color: var(--secondary-light);
+        background-color: var(--background-hover);
     }
 }
