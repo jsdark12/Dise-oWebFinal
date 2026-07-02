@@ -1,6 +1,4 @@
-// ============================================================
 //  DATOS DE NOTICIAS CON IMÁGENES (usando picsum.photos)
-// ============================================================
 const NEWS_DATA = [{
     id: 1,
     title: 'Lanzamiento del nuevo motor gráfico Hyperion',
