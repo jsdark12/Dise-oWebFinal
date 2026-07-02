@@ -1,5 +1,6 @@
 // ============================================================
-//  DATOS DE EJEMPLO (cámbialos por tus propias noticias)
+//  DATOS DE NOTICIAS CON IMÁGENES (usando picsum.photos como placeholder)
+//  Cambia la URL de la imagen por la que prefieras.
 // ============================================================
 const NEWS_DATA = [{
     id: 1,
@@ -11,7 +12,8 @@ const NEWS_DATA = [{
     author: 'María González',
     avatar: 'MG',
     icon: 'fa-microchip',
-    tag: 'Tecnología'
+    tag: 'Tecnología',
+    image: 'https://picsum.photos/seed/1/400/200'
 }, {
     id: 2,
     title: 'El arte conceptual en los videojuegos modernos',
@@ -22,7 +24,8 @@ const NEWS_DATA = [{
     author: 'Carlos Ruiz',
     avatar: 'CR',
     icon: 'fa-paintbrush',
-    tag: 'Diseño'
+    tag: 'Diseño',
+    image: 'https://picsum.photos/seed/2/400/200'
 }, {
     id: 3,
     title: 'Startups de esports que están levantando millones',
@@ -33,7 +36,8 @@ const NEWS_DATA = [{
     author: 'Laura Fernández',
     avatar: 'LF',
     icon: 'fa-trophy',
-    tag: 'Negocios'
+    tag: 'Negocios',
+    image: 'https://picsum.photos/seed/3/400/200'
 }, {
     id: 4,
     title: 'Realidad virtual: el próximo salto en inmersión',
@@ -44,7 +48,8 @@ const NEWS_DATA = [{
     author: 'Andrés Navarro',
     avatar: 'AN',
     icon: 'fa-vr-cardboard',
-    tag: 'Innovación'
+    tag: 'Innovación',
+    image: 'https://picsum.photos/seed/4/400/200'
 }, {
     id: 5,
     title: 'Estrategias de monetización en juegos free-to-play',
@@ -55,7 +60,8 @@ const NEWS_DATA = [{
     author: 'Sofía Méndez',
     avatar: 'SM',
     icon: 'fa-coins',
-    tag: 'Negocios'
+    tag: 'Negocios',
+    image: 'https://picsum.photos/seed/5/400/200'
 }, {
     id: 6,
     title: 'Herramientas de prototipado para game designers',
@@ -66,7 +72,8 @@ const NEWS_DATA = [{
     author: 'Javier López',
     avatar: 'JL',
     icon: 'fa-cubes',
-    tag: 'Diseño'
+    tag: 'Diseño',
+    image: 'https://picsum.photos/seed/6/400/200'
 }, {
     id: 7,
     title: 'IA generativa aplicada a la creación de niveles',
@@ -77,7 +84,8 @@ const NEWS_DATA = [{
     author: 'Dra. Elena Rivas',
     avatar: 'ER',
     icon: 'fa-brain',
-    tag: 'Innovación'
+    tag: 'Innovación',
+    image: 'https://picsum.photos/seed/7/400/200'
 }, {
     id: 8,
     title: 'Blockchain y propiedad digital en los juegos',
@@ -88,7 +96,8 @@ const NEWS_DATA = [{
     author: 'Pablo Torres',
     avatar: 'PT',
     icon: 'fa-link',
-    tag: 'Tecnología'
+    tag: 'Tecnología',
+    image: 'https://picsum.photos/seed/8/400/200'
 }, {
     id: 9,
     title: 'Cultura gamer: de nicho a fenómeno global',
@@ -99,7 +108,8 @@ const NEWS_DATA = [{
     author: 'Marta Salazar',
     avatar: 'MS',
     icon: 'fa-globe',
-    tag: 'Negocios'
+    tag: 'Negocios',
+    image: 'https://picsum.photos/seed/9/400/200'
 }];
 
 // ============================================================
@@ -141,10 +151,8 @@ function renderNews() {
     const toShow = filtered.slice(0, visibleCount);
     const hasMore = filtered.length > visibleCount;
 
-    // Mostrar u ocultar botón "Cargar más"
     loadMoreBtn.style.display = hasMore ? 'inline-flex' : 'none';
 
-    // Si no hay resultados
     if (filtered.length === 0) {
         grid.innerHTML = `
             <div class="no-results">
@@ -156,14 +164,13 @@ function renderNews() {
         return;
     }
 
-    // Construir HTML de las tarjetas
     let html = '';
     toShow.forEach(item => {
         html += `
             <div class="news-card" data-id="${item.id}">
                 <div class="card-image">
+                    <img src="${item.image}" alt="${item.title}" loading="lazy" />
                     <span class="card-tag">${item.tag}</span>
-                    <i class="fas ${item.icon}"></i>
                 </div>
                 <div class="card-body">
                     <div class="card-meta">
@@ -187,7 +194,6 @@ function renderNews() {
     grid.innerHTML = html;
 }
 
-// Actualiza la clase 'active' en los botones de categoría
 function updateActiveCategory() {
     categoryBtns.forEach(btn => {
         const cat = btn.dataset.category;
@@ -195,7 +201,6 @@ function updateActiveCategory() {
     });
 }
 
-// Refresca toda la vista
 function refresh() {
     updateActiveCategory();
     renderNews();
@@ -205,16 +210,14 @@ function refresh() {
 //  EVENTOS
 // ============================================================
 
-// Clic en categorías
 categoryBtns.forEach(btn => {
     btn.addEventListener('click', function() {
         currentCategory = this.dataset.category;
-        visibleCount = 6; // Reiniciar el contador al cambiar de categoría
+        visibleCount = 6;
         refresh();
     });
 });
 
-// Búsqueda con debounce
 let searchTimer;
 searchInput.addEventListener('input', function() {
     clearTimeout(searchTimer);
@@ -225,7 +228,6 @@ searchInput.addEventListener('input', function() {
     }, 300);
 });
 
-// Botón "Cargar más"
 loadMoreBtn.addEventListener('click', function() {
     const filtered = getFilteredData();
     if (visibleCount < filtered.length) {
