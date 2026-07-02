@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft | GhostDragon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/src/css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> GhostDragon</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Lo más vendido</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar...">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ BANNER ============ -->
+    <div class="game-banner">
+        <img src="/src/assets/imagesIndex/LoMasVendido/Minecraft_PC_Bundle_.Net_1170x500.webp" class="img-fluid w-100" alt="Minecraft" style="max-height: 400px; object-fit: cover;">
+    </div>
+
+    <!-- ============ CONTENIDO ============ -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold" style="color: var(--primary);">Minecraft</h1>
+                <div class="d-flex gap-3 mb-3 game-meta">
+                    <span><i class="bi bi-calendar3"></i> 18 de noviembre de 2011</span>
+                    <span><i class="bi bi-tag"></i> Estrategia, Acción y aventura, Gestión</span>
+                    <span class="rating"><i class="bi bi-star-fill"></i> 9.8/10</span>
+                </div>
+
+                <div class="game-description mb-4">
+                    <p>Minecraft es un juego de construcción y aventura en un mundo abierto de bloques. Los jugadores pueden explorar, recolectar recursos, construir estructuras y sobrevivir contra criaturas nocturnas. Es el juego más vendido de la historia.</p>
+                </div>
+
+                <h3 style="color: var(--primary);"><i class="bi bi-list-check"></i> Características principales</h3>
+                <ul class="features-list">
+                    <li><i class="bi bi-check-circle-fill"></i> Mundo infinito generado proceduralmente</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Modos Supervivencia, Creativo y Aventura</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Multijugador en línea y servidores</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Sistema de crafteo y construcción</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Actualizaciones constantes con nuevo contenido</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card text-bg-dark mb-4">
+                    <div class="card-header" style="background: rgba(192, 57, 43, 0.15); color: var(--primary); font-weight: 600;">
+                        <i class="bi bi-info-circle"></i> Información
+                    </div>
+                    <div class="card-body">
+                        <p><strong><i class="bi bi-controller"></i> Género:</strong> Estrategia, Acción y aventura</p>
+                        <p><strong><i class="bi bi-device-desktop"></i> Plataforma:</strong> PC, PS5, Xbox, Nintendo Switch, Mobile</p>
+                        <p><strong><i class="bi bi-tag"></i> Precio:</strong> <span style="color: var(--primary); font-weight: 700;">26.99 €</span></p>
+                        <p><strong><i class="bi bi-star-fill" style="color: #f4a460;"></i> Puntuación:</strong> 9.8/10</p>
+                        <p><strong><i class="bi bi-building"></i> Desarrollador:</strong> Mojang Studios</p>
+                    </div>
+                </div>
+
+                <div class="card text-bg-dark">
+                    <div class="card-header" style="background: rgba(192, 57, 43, 0.15); color: var(--primary); font-weight: 600;">
+                        <i class="bi bi-gear"></i> Requisitos
+                    </div>
+                    <div class="card-body">
+                        <h6 style="color: var(--primary-light);">Mínimos</h6>
+                        <ul style="color: var(--gray); font-size: 0.85rem; padding-left: 1.2rem;">
+                            <li>OS: Windows 10 64-bit</li>
+                            <li>CPU: Intel i3-3210</li>
+                            <li>RAM: 4 GB</li>
+                            <li>GPU: GTX 660</li>
+                        </ul>
+                        <h6 style="color: var(--primary-light); margin-top: 0.8rem;">Recomendados</h6>
+                        <ul style="color: var(--gray); font-size: 0.85rem; padding-left: 1.2rem;">
+                            <li>OS: Windows 11 64-bit</li>
+                            <li>CPU: Intel i5-8400</li>
+                            <li>RAM: 8 GB</li>
+                            <li>GPU: GTX 1060</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="/src/pages/index.html" class="btn btn-primary w-100 mt-3">
+                    <i class="bi bi-arrow-left"></i> Volver al inicio
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <img src="/src/assets/logo/logo2.png" alt="GhostDragon Logo" class="footer-logo">
+            <div class="footer-socials">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="footer-integrantes">
+                <h4>Integrantes</h4>
+                <ul>
+                    <li>Werner Huaycho Jiménez</li>
+                    <li>Rodrigo Santiago Romero Salas</li>
+                    <li>Josue Michel Vargas Portilla</li>
+                    <li>Felix Alexandro Carlos Cuito</li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GhostDragon - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
