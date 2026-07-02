@@ -1,6 +1,6 @@
-/*=====Scrpit para el boton FILTRAR=====*/
 document.addEventListener('DOMContentLoaded', () => {
     
+    /*=====Scrpit para el boton FILTRAR responsive=====*/
     const btnToggleFiltros = document.querySelector('#btn-toggle-filtros');
     const sidebarFiltros = document.querySelector('.sidebar-filters');
     const catalogLayout = document.querySelector('.catalog-layout');
@@ -38,6 +38,43 @@ document.addEventListener('DOMContentLoaded', () => {
         overlayFiltros.addEventListener('click', () => {
             sidebarFiltros.classList.remove('mobile-abierto');
             overlayFiltros.classList.remove('activo');
+        });
+    }
+
+
+    /*=====Scrpit para filtrar=====*/
+    const btnAplicarFiltros = document.querySelector('.sticky-filter-header button');
+    const checkboxesPlataforma = document.querySelectorAll('.sidebar-filters input[type="checkbox"][value]');
+    const tarjetasJuegos = document.querySelectorAll('.game-card');
+
+    if (btnAplicarFiltros) {
+        btnAplicarFiltros.addEventListener('click', () => {
+            
+            const filtrosSeleccionados = Array.from(checkboxesPlataforma)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+            tarjetasJuegos.forEach(tarjeta => {
+                if (filtrosSeleccionados.length === 0) {
+                    tarjeta.classList.remove('oculto-por-filtro');
+                    return; 
+                }
+
+                const plataformaTarjeta = tarjeta.getAttribute('data-plataforma');
+
+                if (filtrosSeleccionados.includes(plataformaTarjeta)) {
+                    tarjeta.classList.remove('oculto-por-filtro');
+                } else {
+                    tarjeta.classList.add('oculto-por-filtro');
+                }
+            });
+
+            if (window.innerWidth < 768) {
+                const sidebarFiltros = document.querySelector('.sidebar-filters');
+                const overlayFiltros = document.querySelector('#fondo-oscuro-filtros');
+                
+                sidebarFiltros.classList.remove('mobile-abierto');
+                if (overlayFiltros) overlayFiltros.classList.remove('activo');
+            }
         });
     }
 });

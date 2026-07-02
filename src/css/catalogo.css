@@ -184,6 +184,10 @@
     gap: 1.5rem;
 }
 
+.oculto-por-filtro {
+    display: none !important;
+}
+
 .game-card {
     background-color: var(--dark-card);
     border-radius: 12px;
