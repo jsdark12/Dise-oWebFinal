@@ -29,6 +29,7 @@ body {
     background: var(--dark);
     color: var(--white);
     font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+    padding-bottom: 3rem;
 }
 
 /* ============ NAVBAR ============ */
@@ -77,6 +78,7 @@ h2 {
     margin: 2.5rem 0 1.5rem 1rem;
     position: relative;
     display: inline-block;
+    color: var(--white) !important;
 }
 
 h2::after {
@@ -145,12 +147,12 @@ a:hover {
 .card-title {
     font-weight: 600;
     font-size: 1.1rem;
-    color: var(--white);
+    color: var(--white) !important;
     margin-bottom: 0.5rem;
 }
 
 .card-text {
-    color: var(--gray);
+    color: var(--gray) !important;
     font-size: 0.9rem;
 }
 
@@ -190,11 +192,11 @@ a:hover .card {
 }
 
 .card.text-bg-dark .card-title {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .card.text-bg-dark .card-text {
-    color: var(--gray);
+    color: var(--gray) !important;
 }
 
 .card.text-bg-dark:hover {
@@ -313,6 +315,26 @@ img[src="imagenes/ForzaHorizon6.jpg"],
     border-bottom: 2px solid var(--border-color);
 }
 
+/* Metadatos del juego - TEXTO BLANCO LEGIBLE */
+.game-meta span,
+.d-flex.gap-3.mb-3 span {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.d-flex.gap-3.mb-3 span i {
+    color: var(--primary);
+}
+
+.d-flex.gap-3.mb-3 .rating {
+    color: #f4a460 !important;
+    font-weight: 700;
+}
+
+.d-flex.gap-3.mb-3 .rating i {
+    color: #f4a460;
+}
+
 /* Descripción del juego */
 .game-description {
     background: var(--dark-card);
@@ -323,7 +345,7 @@ img[src="imagenes/ForzaHorizon6.jpg"],
 
 .game-description p {
     font-size: 1.1rem;
-    color: var(--gray-light);
+    color: var(--gray-light) !important;
 }
 
 /* Lista de características */
@@ -335,7 +357,7 @@ img[src="imagenes/ForzaHorizon6.jpg"],
 .features-list li {
     padding: 0.5rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--gray);
+    color: var(--gray) !important;
 }
 
 .features-list li:last-child {
@@ -347,6 +369,150 @@ img[src="imagenes/ForzaHorizon6.jpg"],
     margin-right: 0.5rem;
 }
 
+/* ============ FOOTER ============ */
+.site-footer {
+    background-color: #1a1a1a;
+    padding: 3rem 0;
+    position: relative;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: var(--primary);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.footer-socials a {
+    color: var(--primary);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.footer-integrantes {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-integrantes h4 {
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-integrantes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-integrantes li {
+    color: var(--gray) !important;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    color: var(--gray-dark);
+    font-size: 0.8rem;
+}
+
+.footer-bottom p {
+    color: var(--gray-dark) !important;
+}
+
+/* ============ FORZAR TEXTO BLANCO LEGIBLE (para todas las páginas) ============ */
+h1, h2, h3, h4, h5, h6,
+p, li, span,
+.card-title,
+.card-text,
+.game-description p,
+.features-list li,
+.footer-integrantes li,
+.footer-bottom p {
+    color: #e8e8e8 !important;
+}
+
+/* Excepciones - mantener colores especiales */
+.nav-link {
+    color: #b0b7c4 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.rating {
+    color: #f4a460 !important;
+}
+
+.rating i {
+    color: #f4a460 !important;
+}
+
+.card-header {
+    color: var(--primary) !important;
+}
+
+.game-meta span i,
+.features-list li i {
+    color: var(--primary) !important;
+}
+
+a {
+    color: var(--primary) !important;
+}
+
+a:hover {
+    color: var(--primary-dark) !important;
+}
+
+.btn-primary,
+.btn-outline-success {
+    color: white !important;
+}
+
+.btn-outline-success {
+    color: var(--primary) !important;
+}
+
+.btn-outline-success:hover {
+    color: white !important;
+}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 992px) {
@@ -386,6 +552,15 @@ img[src="imagenes/ForzaHorizon6.jpg"],
     .footer-integrantes li {
         font-size: 0.8rem;
     }
+
+    .game-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .game-meta span {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -411,5 +586,409 @@ img[src="imagenes/ForzaHorizon6.jpg"],
 
     .footer-logo {
         width: 150px;
+    }
+
+    .game-meta span {
+        font-size: 0.75rem;
+    }
+
+    .game-description p {
+        font-size: 0.9rem;
+    }
+}
+/* ============ NUEVOS ESTILOS PARA EL INDEX MEJORADO ============ */
+
+/* Hero Banner con overlay */
+.hero-banner {
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(192,57,43,0.3) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 0 0 50px rgba(192,57,43,0.5);
+}
+
+.hero-text .tagline {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.hero-text .description {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Categorías rápidas */
+.quick-categories {
+    padding: 2rem 0;
+    background: var(--dark-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    color: var(--gray-light);
+    text-decoration: none;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.category-card:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--shadow-primary);
+}
+
+.category-card i {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.category-card span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Rating en cards */
+.game-rating {
+    color: #f4a460;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.game-rating i {
+    color: #f4a460;
+    margin-right: 0.2rem;
+}
+
+/* Noticias horizontales */
+.news-card-horizontal {
+    display: flex;
+    gap: 1.2rem;
+    background: var(--dark-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s;
+    padding: 0.5rem;
+}
+
+.news-card-horizontal:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.news-card-horizontal .news-img {
+    min-width: 150px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: linear-gradient(135deg, #1a0a0a, #0a0a0a);
+    border-radius: 8px;
+}
+
+.news-card-horizontal .news-content {
+    padding: 0.8rem 0.5rem;
+    flex: 1;
+}
+
+.news-card-horizontal .news-category {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+.news-card-horizontal .news-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0.3rem 0;
+}
+
+.news-card-horizontal .news-content p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-card-horizontal .news-content small {
+    color: var(--gray-dark);
+    font-size: 0.75rem;
+}
+
+/* Feature Cards */
+.features-section {
+    padding: 3rem 0;
+}
+
+.feature-card {
+    text-align: center;
+    background: var(--dark-card);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.feature-card h4 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Testimonials */
+.testimonials-section {
+    padding: 3rem 0;
+    background: var(--dark-card);
+}
+
+.testimonial-card {
+    background: var(--dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+    border-color: var(--primary);
+}
+
+.testimonial-card .stars {
+    color: #f4a460;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card p {
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card .user {
+    color: var(--gray-dark);
+    font-size: 0.85rem;
+}
+
+/* Newsletter mejorado */
+.newsletter-section {
+    padding: 4rem 0;
+}
+
+.newsletter-box {
+    background: linear-gradient(135deg, var(--dark-card), #1a0a0a);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-box h2 {
+    margin: 0 0 0.5rem 0;
+    border: none;
+    font-size: 2rem;
+}
+
+.newsletter-box h2 i {
+    color: var(--primary);
+}
+
+.newsletter-box p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-box .newsletter-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter-box .newsletter-form input {
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--dark);
+    color: var(--white);
+    min-width: 280px;
+    flex: 1;
+}
+
+.newsletter-box .newsletter-form input::placeholder {
+    color: var(--gray-dark);
+}
+
+.newsletter-box .newsletter-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 20px var(--shadow-primary);
+}
+
+.newsletter-box .newsletter-form button {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.newsletter-box .newsletter-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--shadow-primary);
+}
+
+/* Footer links */
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .hero-text .description {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .news-card-horizontal {
+        flex-direction: column;
+    }
+    
+    .news-card-horizontal .news-img {
+        min-height: 120px;
+        min-width: 100%;
+    }
+    
+    .category-card i {
+        font-size: 1.5rem;
+    }
+    
+    .newsletter-box {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .newsletter-box .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-box .newsletter-form input {
+        min-width: 100%;
+    }
+    
+    .footer-links {
+        gap: 1rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text .tagline {
+        font-size: 1rem;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(192,57,43,0.4) 100%);
+    }
+    
+    .category-card {
+        padding: 0.7rem;
+    }
+    
+    .category-card i {
+        font-size: 1.2rem;
+    }
+    
+    .category-card span {
+        font-size: 0.6rem;
     }
 }
