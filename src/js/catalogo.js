@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const catalogLayout = document.querySelector('.catalog-layout');
     const tamanioMobile = window.matchMedia('(max-width: 767px)');
     const overlayFiltros = document.querySelector('#fondo-oscuro-filtros');
-
+    
     function evaluarResponsivo(evento) {
         if (evento.matches) {
             sidebarFiltros.classList.remove('d-none');
@@ -77,4 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+
+
 });
