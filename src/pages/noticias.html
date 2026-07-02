@@ -6,34 +6,26 @@
     <title>GHOSTDRAGON · GAME INSIGHT</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src/css/global.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/src/css/global.css">
     <link rel="stylesheet" href="/src/css/noticias.css" />
     <link rel="icon" type="image/png" href="/src/assets/logo/logo2.png">
 </head>
 <body>
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img class="logo" src="/src/assets/logo/logo2.png"></a>
+                <a class="navbar-brand" href="index.html"><img class="logo" src="/src/assets/logo/logo2.png" alt="Logo"></a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="catalogo.html" tabindex="-1" aria-disabled="true">Catálogo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="noticias.html">Noticias</a>
-                        </li>                        
-                        <li class="nav-item">
-                            <a class="nav-link " href="soporte.html" tabindex="-1" aria-disabled="true">Soporte</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search"/>
@@ -58,6 +50,7 @@
             <div class="news-search">
                 <i class="fas fa-search"></i>
                 <input type="text" id="searchInput" placeholder="Buscar noticias..." />
+                <span class="result-count" id="resultCount">0</span>
             </div>
         </div>
 
@@ -65,11 +58,8 @@
         <div class="featured-card" id="featuredCard">
             <div class="featured-image">
                 <span class="badge-featured"><i class="fas fa-fire"></i> Destacado</span>
-                <!-- 🔽 REEMPLAZA EL src CON LA URL DE TU IMAGEN DESTACADA 🔽 -->
-                <img src="assents/logo/logo2" alt="Noticia destacada" class="featured-img" />
-                <div class="image-placeholder featured-placeholder">
-                    <i class="fas fa-gamepad"></i>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZlz88n6b2vNrxmQ05iDXahGouSyztdeyJTy2pxJjEg&s" alt="Noticia destacada" class="featured-img" />
+                <div class="image-overlay"></div>
             </div>
             <div class="featured-content">
                 <div class="meta">
@@ -92,6 +82,7 @@
         <div class="load-more-wrapper">
             <button class="load-more-btn" id="loadMoreBtn">
                 <i class="fas fa-plus-circle"></i> Cargar más
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
             </button>
         </div>
 
@@ -114,7 +105,6 @@
                 </div>
             </div>
 
-            <!-- ===== SITIOS RECOMENDADOS ===== -->
             <div class="footer-right">
                 <h4>🌐 Sitios de noticias gaming</h4>
                 <div class="gaming-sites">
@@ -135,6 +125,7 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/noti.js"></script>
 </body>
 </html>

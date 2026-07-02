@@ -1,6 +1,5 @@
 // ============================================================
-//  DATOS DE NOTICIAS CON IMÁGENES (usando picsum.photos como placeholder)
-//  Cambia la URL de la imagen por la que prefieras.
+//  DATOS DE NOTICIAS CON IMÁGENES (usando picsum.photos)
 // ============================================================
 const NEWS_DATA = [{
     id: 1,
@@ -13,7 +12,7 @@ const NEWS_DATA = [{
     avatar: 'MG',
     icon: 'fa-microchip',
     tag: 'Tecnología',
-    image: 'https://picsum.photos/seed/1/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6XWcAm2KsGtGVH4unqmUvgaF_mqVo76N-JSKE5_Mymg&s=10'
 }, {
     id: 2,
     title: 'El arte conceptual en los videojuegos modernos',
@@ -25,7 +24,7 @@ const NEWS_DATA = [{
     avatar: 'CR',
     icon: 'fa-paintbrush',
     tag: 'Diseño',
-    image: 'https://picsum.photos/seed/2/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoWTO3MlYyt9LxMeKQPcwJZnpB9qWN224K2oW7PlH6zg&s=10'
 }, {
     id: 3,
     title: 'Startups de esports que están levantando millones',
@@ -37,7 +36,7 @@ const NEWS_DATA = [{
     avatar: 'LF',
     icon: 'fa-trophy',
     tag: 'Negocios',
-    image: 'https://picsum.photos/seed/3/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqNireMFxx3iedXmUkxe1X-zxMlFalKzBvds49W7IPow&s=10'
 }, {
     id: 4,
     title: 'Realidad virtual: el próximo salto en inmersión',
@@ -49,7 +48,7 @@ const NEWS_DATA = [{
     avatar: 'AN',
     icon: 'fa-vr-cardboard',
     tag: 'Innovación',
-    image: 'https://picsum.photos/seed/4/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXGBwR1HG8S792c8Y39u8oUCjUjqObxgrtaRgev5IYwQ&s=10'
 }, {
     id: 5,
     title: 'Estrategias de monetización en juegos free-to-play',
@@ -61,7 +60,7 @@ const NEWS_DATA = [{
     avatar: 'SM',
     icon: 'fa-coins',
     tag: 'Negocios',
-    image: 'https://picsum.photos/seed/5/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjgyGLwdVk-_1FT6zArIajtkGb9ieuQhHWCfwy20fIg&s=10'
 }, {
     id: 6,
     title: 'Herramientas de prototipado para game designers',
@@ -73,7 +72,7 @@ const NEWS_DATA = [{
     avatar: 'JL',
     icon: 'fa-cubes',
     tag: 'Diseño',
-    image: 'https://picsum.photos/seed/6/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXvIRmBJiFyZOxO_vm6NTLbYlypzuLIvrF7JeVa7cqg&s=10'
 }, {
     id: 7,
     title: 'IA generativa aplicada a la creación de niveles',
@@ -85,7 +84,7 @@ const NEWS_DATA = [{
     avatar: 'ER',
     icon: 'fa-brain',
     tag: 'Innovación',
-    image: 'https://picsum.photos/seed/7/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhB6ow3BHhWcHmpsroy0sD5ozd1Rg2Vp2OiuoVXDlDJg&s=10'
 }, {
     id: 8,
     title: 'Blockchain y propiedad digital en los juegos',
@@ -97,7 +96,7 @@ const NEWS_DATA = [{
     avatar: 'PT',
     icon: 'fa-link',
     tag: 'Tecnología',
-    image: 'https://picsum.photos/seed/8/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzHARCMIpqs-x7TMSzs03ZYJm9xs7KAQBDFuuEvt1k7u4ezogPSyxBN-Gl&s=10'
 }, {
     id: 9,
     title: 'Cultura gamer: de nicho a fenómeno global',
@@ -109,7 +108,7 @@ const NEWS_DATA = [{
     avatar: 'MS',
     icon: 'fa-globe',
     tag: 'Negocios',
-    image: 'https://picsum.photos/seed/9/400/200'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Y5RexVO-XFvclNnmqnElVzjv3wwAmbL7sVkdJvm-Hw&s=10s'
 }];
 
 // ============================================================
@@ -118,20 +117,18 @@ const NEWS_DATA = [{
 let currentCategory = 'all';
 let searchQuery = '';
 let visibleCount = 6;
+let isLoading = false;
 
-// ============================================================
+
 //  REFERENCIAS DEL DOM
-// ============================================================
 const grid = document.getElementById('newsGrid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const searchInput = document.getElementById('searchInput');
 const categoryBtns = document.querySelectorAll('#categoryFilter button');
+const resultCount = document.getElementById('resultCount');
 
-// ============================================================
 //  FUNCIONES PRINCIPALES
-// ============================================================
 
-// Filtra los datos según categoría y búsqueda
 function getFilteredData() {
     return NEWS_DATA.filter(item => {
         const matchCategory = currentCategory === 'all' || item.category === currentCategory;
@@ -145,13 +142,15 @@ function getFilteredData() {
     });
 }
 
-// Renderiza las tarjetas en el grid
 function renderNews() {
     const filtered = getFilteredData();
     const toShow = filtered.slice(0, visibleCount);
     const hasMore = filtered.length > visibleCount;
 
+    // Mostrar/ocultar botón
     loadMoreBtn.style.display = hasMore ? 'inline-flex' : 'none';
+    // Actualizar contador
+    resultCount.textContent = filtered.length > 0 ? `${toShow.length}/${filtered.length}` : '0';
 
     if (filtered.length === 0) {
         grid.innerHTML = `
@@ -206,10 +205,7 @@ function refresh() {
     renderNews();
 }
 
-// ============================================================
 //  EVENTOS
-// ============================================================
-
 categoryBtns.forEach(btn => {
     btn.addEventListener('click', function() {
         currentCategory = this.dataset.category;
@@ -229,17 +225,29 @@ searchInput.addEventListener('input', function() {
 });
 
 loadMoreBtn.addEventListener('click', function() {
+    if (isLoading) return;
     const filtered = getFilteredData();
-    if (visibleCount < filtered.length) {
+    if (visibleCount >= filtered.length) return;
+
+    // Simular carga
+    isLoading = true;
+    const spinner = this.querySelector('.spinner-border');
+    const icon = this.querySelector('.fa-plus-circle');
+    spinner.classList.remove('d-none');
+    icon.classList.add('d-none');
+    this.disabled = true;
+
+    setTimeout(() => {
         visibleCount = Math.min(visibleCount + 4, filtered.length);
         renderNews();
-    }
-    if (visibleCount >= filtered.length) {
-        this.style.display = 'none';
-    }
+        spinner.classList.add('d-none');
+        icon.classList.remove('d-none');
+        this.disabled = false;
+        isLoading = false;
+        if (visibleCount >= filtered.length) {
+            this.style.display = 'none';
+        }
+    }, 400); // Simula carga de red
 });
-
-// ============================================================
 //  INICIALIZAR
-// ============================================================
 refresh();
